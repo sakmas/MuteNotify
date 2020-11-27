@@ -4,10 +4,7 @@ const Settings = require('./view/Settings');
 
 let win;
 const createWindow = () => {
-  const windowState = windowStateKeeper({
-    defaultHeight: 80,
-    defaultWidth: 650
-  });
+  const windowState = windowStateKeeper();
   win = new BrowserWindow({
     height: 125,
     width: 550,
