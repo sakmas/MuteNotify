@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="iziToast.min.css">
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+    #drag-overlay {
+      display: none;
+      /* display: flex; */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(128 128 128 / .8);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 999999;
+      border-radius: 8px;
+      box-sizing: border-box;
+      border: 2px dashed whitesmoke;
+      -webkit-app-region: drag;
+    }
+    #drag-overlay-apply {
+      -webkit-app-region: no-drag;
+    }
+    .drag-overlay-text {
+      color: whitesmoke;
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+    .btn {
+      padding: 5px 20px;
+      color: whitesmoke;
+      border-style: none;
+      font-size: 1em;
+      border-radius: 1em;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    .btn-apply {
+      background-color: #186690;
+    }
+    /* iziToast Custom */
+    .iziToast {
+      border-radius: 5px;
+    }
+    .iziToast>.iziToast-body .iziToast-texts {
+      margin: 10px 10px 0;
+    }
+  </style>
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div id="drag-overlay">
+    <div><span class="drag-overlay-text">ドラッグで移動</span></div>
+    <div><button class="btn btn-apply" id="drag-overlay-apply">適用</button></div>
+  </div>
+</body>
+</html>

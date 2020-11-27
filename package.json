@@ -1,0 +1,35 @@
+{
+  "name": "mute_notify",
+  "version": "0.0.1",
+  "description": "Notify the mute state of the microphone.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "npx electron src",
+    "build": "npx electron-builder --win --x64"
+  },
+  "author": "sakmas",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-store": "^6.0.1",
+    "electron-window-state": "^5.0.3",
+    "izitoast": "^1.4.0"
+  },
+  "build": {
+    "appId": "com.sakmas.MuteNotify",
+    "extends": null,
+    "files": [
+      "assets/**/*",
+      "src/**/*",
+      "package.json",
+      "package-lock.json"
+    ],
+    "win": {
+      "icon": "assets/win/icon.ico",
+      "target": "portable"
+    }
+  }
+}
